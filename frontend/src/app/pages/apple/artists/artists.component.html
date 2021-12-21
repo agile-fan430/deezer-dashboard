@@ -1,0 +1,20 @@
+<nb-card>
+  <nb-card-header>
+    Artists Table
+  </nb-card-header>
+
+  <nb-card-body>
+    <input #search class="search" type="text" placeholder="Search.." (keydown.enter)="onSearch(search.value)" />
+    <ng2-smart-table
+      [settings]="settings"
+      [source]="source"
+      (createConfirm)="onCreateConfirm($event)"
+      (editConfirm)="onEditConfirm($event)"
+      (deleteConfirm)="onDeleteConfirm($event)"
+    >
+    </ng2-smart-table>
+    <div class="upload-section">
+      <input type="file" #csvReader name="Upload CSV" id="txtFileUpload" (change)="uploadListener($event)" accept=".csv" /> 
+    </div>
+  </nb-card-body>
+</nb-card>

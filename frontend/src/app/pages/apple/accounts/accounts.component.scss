@@ -1,0 +1,17 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  nb-card {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.upload-section {
+  margin-top: 10px;
+
+  input {
+    float: right;
+    width: 100px;
+    height: 30px;
+  }
+}

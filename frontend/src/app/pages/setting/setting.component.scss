@@ -1,0 +1,41 @@
+.inline {
+  display: inline-block;
+}
+
+.leading-label {
+  font-size: 20px;
+}
+
+.form-group {
+  .input-control {
+    width: 5rem;
+  }
+
+  span {
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
+}
+
+.form-info {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.setting-card {
+  align-items: center;
+  vertical-align: middle;
+}
+
+.padding-top-10 {
+  padding-top: 10px;
+}
+
+.save-button {
+  float: right;
+  width: 100px;
+  height: 40px;
+  color: white;
+  background: #fc3164;
+}

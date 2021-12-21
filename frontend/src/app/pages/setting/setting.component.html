@@ -1,0 +1,133 @@
+<div class="row">
+  <nb-card status="primary" class="col-md-12">
+    <nb-card-body class="row setting-card">
+      <div class="col-md-3 leading-label">Play Method:</div>
+      <div class="col-md-9 padding-top-10">
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="minPlaySecond" [(ngModel)]="min_play" />
+          <span>seconds</span>
+        </div>
+        <div class="form-info">:</div>
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="maxPlaySeconds" [(ngModel)]="max_play" />
+          <span>seconds</span>
+        </div>
+        <div class="form-info">With</div>
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="percentageOfPlay" [(ngModel)]="percent_play"/>
+          <span>% of time</span>
+        </div>
+      </div>
+    </nb-card-body>
+  </nb-card>
+  <nb-card status="primary" class="col-md-12">
+    <nb-card-body class="row setting-card">
+      <div class="col-md-3 leading-label">Rotation rules between Library and non-Library:</div>
+      <div class="col-md-9 padding-top-10">
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="libraryRotation" [(ngModel)]="library_rotation"/>
+          <span>%</span>
+        </div>
+      </div>
+    </nb-card-body>
+  </nb-card>
+  <nb-card status="primary" class="col-md-12">
+    <nb-card-body class="row setting-card">
+      <div class="col-md-3 leading-label">Add track to library with :</div>
+      <div class="col-md-9 padding-top-10">
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="addLibrary" [(ngModel)]="add_library"/>
+          <span>%</span>
+        </div>
+      </div>
+    </nb-card-body>
+  </nb-card>
+  <!-- <nb-card status="primary" class="col-md-12">
+    <nb-card-body class="row setting-card">
+      <div class="col-md-3 leading-label">Playing by Search Title:</div>
+      <div class="col-md-9 padding-top-10">
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="searchTitle" [(ngModel)]="search_title"/>
+          <span>%</span>
+        </div>
+      </div>
+    </nb-card-body>
+  </nb-card> -->
+  <nb-card status="primary" class="col-md-12">
+    <nb-card-body class="row setting-card">
+      <div class="col-md-3 leading-label">Rotation rules between tracks, albums, artists:</div>
+      <div class="col-md-9 padding-top-10">
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="minRotation" [(ngModel)]="min_rotation"/>
+          <span>minutes</span>
+        </div>
+        <div class="form-info">:</div>
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="maxRotation" [(ngModel)]="max_rotation"/>
+          <span>minutes</span>
+        </div>
+      </div>
+    </nb-card-body>
+  </nb-card>
+  <nb-card status="primary" class="col-md-12">
+    <nb-card-body class="row setting-card">
+      <div class="col-md-3 leading-label">Stream during local time:</div>
+      <div class="col-md-9 padding-top-10">
+        <div class="form-group inline">
+          <toggle-button (changed)="local_time=$event" [checked]="local_time"></toggle-button>
+        </div>
+      </div>
+    </nb-card-body>
+  </nb-card>
+  <nb-card status="primary" class="col-md-12">
+    <nb-card-body class="row setting-card">
+      <div class="col-md-3 leading-label">Stream hours:</div>
+      <div class="col-md-9 padding-top-10">
+        <div class="form-group inline">
+          <input type="string" class="form-control inline input-control" name="minStream" [(ngModel)]="min_stream"/>
+          <span>hours</span>
+        </div>
+        <div class="form-info">:</div>
+        <div class="form-group inline">
+          <input type="string" class="form-control inline input-control" name="maxStream" [(ngModel)]="max_stream"/>
+          <span>hours</span>
+        </div>
+      </div>
+    </nb-card-body>
+  </nb-card>
+  <nb-card status="primary" class="col-md-12">
+    <nb-card-body class="row setting-card">
+      <div class="col-md-3 leading-label">Pause duration:</div>
+      <div class="col-md-9 padding-top-10">
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="minPause" [(ngModel)]="min_pause"/>
+          <span>seconds</span>
+        </div>
+        <div class="form-info">:</div>
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="maxPause" [(ngModel)]="max_pause"/>
+          <span>seconds</span>
+        </div>
+      </div>
+    </nb-card-body>
+  </nb-card>
+  <nb-card status="primary" class="col-md-12">
+    <nb-card-body class="row setting-card">
+      <div class="col-md-3 leading-label">Pause frequency:</div>
+      <div class="col-md-9 padding-top-10">
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="minPauseFrequency" [(ngModel)]="min_pause_frequency"/>
+          <span>songs</span>
+        </div>
+        <div class="form-info">:</div>
+        <div class="form-group inline">
+          <input type="number" class="form-control inline input-control" name="maxPauseFrequency" [(ngModel)]="max_pause_frequency"/>
+          <span>songs</span>
+        </div>
+      </div>
+    </nb-card-body>
+  </nb-card>
+  <div class="col-md-12">
+    <button type="button" class="primary-button save-button" (click)="onSave($event)">Save</button>
+  </div>
+</div>
